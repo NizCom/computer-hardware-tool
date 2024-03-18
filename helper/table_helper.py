@@ -32,6 +32,7 @@ def add_operation_system_data():
     operating_system = platform.system()
     # Adding to table
     table.add_row(['operating system', operating_system])
+    logger.logger.debug("Operation system data was inserted in table successfully.")
 
 def add_CPU_data():
     global table
@@ -51,6 +52,8 @@ def add_CPU_data():
             ['CPU frequency', cpu_frequency]
         ]
     )
+    logger.logger.debug("CPU data was inserted in table successfully.")
+
 
 def add_RAM_data():
     global table
@@ -68,6 +71,7 @@ def add_RAM_data():
             ['Free memory in RAM', ram_free_space]
         ]
     )
+    logger.logger.debug("RAM data was inserted in table successfully.")
 
 def add_disks_data(partitions):
     # inserts disks' data into indexes and table for printing a data frame.
@@ -79,14 +83,16 @@ def add_disks_data(partitions):
             # this can be caught due to the disk that isn't ready
             continue
         used = text_helper.size_format(partition_usage.used)
-        free = text_helper.size_format(partition_usage.free)
+        total = text_helper.size_format(partition_usage.total)
         usage_percentage = partition_usage.percent
         text_color = text_helper.get_font_color(usage_percentage)
         # Adding to table
-        table.add_row([f"Device {partition.device} usage", text_color + f"{used} / {free} ({usage_percentage}%)" + text_helper.DEFAULT])
+        table.add_row([f"Device {partition.device} usage", text_color + f"{used} / {total} ({usage_percentage}%)" + text_helper.DEFAULT])
+    logger.logger.debug("Disks data was inserted in table successfully.")
 
 def add_IP_data():
     IP_address = socket.gethostbyname(socket.gethostname())
     # Adding to table
     table.add_row(['IP address', IP_address])
+    logger.logger.debug("IP data was inserted in table successfully.")
 

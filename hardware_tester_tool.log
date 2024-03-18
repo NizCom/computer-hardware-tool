@@ -1,2 +1,7 @@
-25/01/2024 11:58:09 PM - INFO - unit for displaying data in table: GB
-25/01/2024 11:58:10 PM - INFO - data table was printed successfully.
+18/03/2024 10:09:06 PM - INFO - unit for displaying data in table: GB.
+18/03/2024 10:09:06 PM - DEBUG - Operation system data was inserted in table successfully.
+18/03/2024 10:09:07 PM - DEBUG - CPU data was inserted in table successfully.
+18/03/2024 10:09:07 PM - DEBUG - RAM data was inserted in table successfully.
+18/03/2024 10:09:07 PM - DEBUG - Disks data was inserted in table successfully.
+18/03/2024 10:09:07 PM - DEBUG - IP data was inserted in table successfully.
+18/03/2024 10:09:07 PM - INFO - data table was printed successfully.
